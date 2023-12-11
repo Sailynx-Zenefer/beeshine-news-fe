@@ -1,6 +1,252 @@
+:root{
+  /* Sidereal Colours 5000 color palette */
+  /* VIOLT */
+  --VIOLT-ZAP: #f100fd;
+  --VIOLT-PASTL: #ce8dd0;
+  --VIOLT-HLITE: #f97edf;
+  --VIOLT-LITE: #c544cc;
+  --VIOLT-HMED: #86289d;
+  --VIOLT-LMED: #611b7b;
+  --VIOLT-DARK: #260a46;
+  --VIOLT-LDARK: #100122;
+  
+  /* INDGO */
+  --INDGO-ZAP: #8610fe;
+  --INDGO-PASTL: #af98eb;
+  --INDGO-HLITE: #ca98fe;
+  --INDGO-LITE: #9c5cf0;
+  --INDGO-HMED: #7c3cda;
+  --INDGO-LMED: #4406af;
+  --INDGO-DARK: #190659;
+  --INDGO-LDARK: #07002c;
+  
+  /* BLUE */
+  --BLUE-ZAP: #020bfe;
+  --BLUE-PASTL: #82a7f4;
+  --BLUE-HLITE: #61bbff;
+  --BLUE-HLITE-075: rgba(97, 187, 255,0.75);
+  --BLUE-HLITE-05: rgba(97, 187, 255,0.5);
+  --BLUE-LITE: #0284f8;
+  --BLUE-LITE-05: rgba(22, 69, 220,0.5);
+  --BLUE-HMED: #1645dc;
+  --BLUE-HMED-05: rgba(22, 69, 220,0.5);
+  --BLUE-LMED: #101fbb;
+  --BLUE-LMED-05:rgba(16, 31, 187, 0.5);
+  --BLUE-DARK: #100064;
+  --BLUE-DARK-05: rgba(16, 0, 100, 0.5);
+  --BLUE-LDARK: #030030;
+  --BLUE-LDARK-05: rgba(3, 0, 48,0);
+  
+  /* AZURE */
+  --AZURE-ZAP: #00f3ff;
+  --AZURE-PASTL: #1cbec7;
+  --AZURE-HLITE: #10d8d6;
+  --AZURE-LITE: #10becb;
+  --AZURE-HMED: #0295b8;
+  --AZURE-LMED: #00496b;
+  --AZURE-DARK: #001e40;
+  --AZURE-LDARK: #000a1a;
+  
+  /* GREEN */
+  --GREEN-ZAP: #62f50c;
+  --GREEN-PASTL: #81bb6f;
+  --GREEN-HLITE: #49e109;
+  --GREEN-HLITE-075: rgba(73, 225, 9, 0.75);
+  --GREEN-HLITE-05:rgba(73, 225, 9, 0.5);
+  --GREEN-LITE: #3cc912;
+  --GREEN-LITE-075: rgba(60, 201, 18, 0.5);
+  --GREEN-LITE-05: rgba(60, 201, 18, 0.5);
+  --GREEN-HMED: #00a32c;
+  --GREEN-HMED-05: rgba(0, 163, 44, 0.5);
+  --GREEN-LMED: #025031;
+  --GREEN-LMED-05: rgba(2, 80, 49, 0.5);
+  --GREEN-DARK: #002421;
+  --GREEN-DARK-05: rgba(0, 36, 33, 0.5);
+  --GREEN-LDARK: #000d0c;
+  
+  /* LIME */
+  --LIME-ZAP: #cfff00;
+  --LIME-PASTL: #9bb45b;
+  --LIME-HLITE: #b5e416;
+  --LIME-LITE: #75c000;
+  --LIME-HMED: #499d09;
+  --LIME-LMED: #1f5004;
+  --LIME-DARK: #152402;
+  --LIME-LDARK: #070c01;
+  
+  /* YELLW */
+  --YELLW-ZAP: #fbf400;
+  --YELLW-PASTL: #b0ad4c;
+  --YELLW-HLITE: #f6e600;
+  --YELLW-HLITE-05: rgba(246, 230, 0, 0.5);
+  --YELLW-LITE: #d8be02;
+  --YELLW-LITE-075: rgba(216, 190, 2, 0.75);
+  --YELLW-LITE-05: rgba(216, 190, 2, 0.5);
+  --YELLW-HMED: #9e8600;
+  --YELLW-HMED-05: rgba(158, 134, 0, 0.5);
+  --YELLW-LMED: #593c00;
+  --YELLW-LMED-05: rgba(89, 60, 0, 0.5);
+  --YELLW-DARK: #281c00;
+  --YELLW-LDARK: #100800;
+  
+  /* ORANG */
+  --ORANG-ZAP: #ff9100;
+  --ORANG-PASTL: #de9554;
+  --ORANG-HLITE: #ffa82b;
+  --ORANG-LITE: #f28a03;
+  --ORANG-HMED: #ca6800;
+  --ORANG-LMED: #653600;
+  --ORANG-DARK: #381001;
+  --ORANG-LDARK: #190300;
+  
+  /* RED */
+  --RED-ZAP: #fe0c03;
+  --RED-PASTL: #ea8a7b;
+  --RED-HLITE: #fd8f7b;
+  --RED-HLITE-05:rgba(253, 143, 123, 0.5);
+  --RED-LITE: #f03024;
+  --RED-LITE-075: rgba(240, 48, 36, 0.75);
+  --RED-LITE-05: rgba(240, 48, 36, 0.5);
+  --RED-HMED: #c7101a;
+  --RED-HMED-075: rgba(199, 16, 26, 0.75);
+  --RED-HMED-05: rgba(199, 16, 26, 0.5);
+  --RED-LMED: #810510;
+  --RED-LMED-05: rgba(129, 5, 16, 0.5);
+  --RED-DARK: #3f030b;
+  --RED-DARK-05: rgba(63, 3, 11, 0.5);
+  --RED-LDARK: #1b0104;
+  
+  /* ROSE */
+  --ROSE-ZAP: #fe0d8d;
+  --ROSE-PASTL: #e487a7;
+  --ROSE-HLITE: #fe8a9e;
+  --ROSE-LITE: #e13f7a;
+  --ROSE-HMED: #a6005f;
+  --ROSE-LMED: #78044d;
+  --ROSE-DARK: #3a002a;
+  --ROSE-LDARK: #180014;
+  
+  /* GREY */
+  --GREY-ZAP: #5c5c5c;
+  --GREY-PASTL: #6b6b6b;
+  --GREY-HLITE: #cecece;
+  --GREY-LITE: #a8a8a8;
+  --GREY-HMED: #868686;
+  --GREY-LMED: #434343;
+  --GREY-DARK: #1e1e1e;
+  --GREY-LDARK: #0a0a0a;
+  
+  --BLACK-A: rgba(0, 0, 0,0);
+  }
+
+
 #root {
-  max-width: 1280px;
+  display: grid;
+  grid-template-rows: 14.590% 85.41%;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
+
+}
+
+.head-nav{
+  display: grid;
+  grid-template-columns: 38.197% 61.803%;
+}
+
+header {
+  display: flex;
+  flex-flow: column;
+  grid-row: 1 / 2;
+  grid-column: 1 / 1;
+  border: solid var(--YELLW-LITE);
+  border-radius: 1em;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header > h1 {
+  padding: 0;
+  margin: 0;
+  font-size: larger;
+}
+
+header > p {
+  padding: 0;
+  margin: 0;
+}
+
+nav {
+  grid-column: 2 / 2;
+  border: solid var(--YELLW-LITE);
+  border-radius: 1em;
+}
+
+.list-articles-view {
+  width: 100%;
+  grid-row: 2 / 2;
+  grid-column: 1 / 1;
+  border: solid var(--RED-ZAP);
+  border-radius: 1em;
+}
+
+.article-list{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  padding: 0;
+  margin: 0;
+}
+
+.article-card {
+  width: 100%;
+  background-color: var(--GREY-LMED);
+  padding: 0;
+  margin: 10px 0;
+  border: solid var(--INDGO-ZAP);
+  border-radius: 1em;
+  display: grid;
+  grid-template-columns: 14.590% 23.607% 61.803%;
+  grid-template-rows: 61.803% 38.197%;
+}
+
+
+.article-card > .voter {
+  grid-row: 2 / 2;
+  grid-column: 1 / 1;
+  border: solid var(--BLUE-ZAP);
+  border-radius: 1em;
+}
+
+.article-card > img {
+  width: 200px;
+  height: 200px;
+  min-height: 100%;
+  max-height: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  grid-row: 1 / 1;
+  grid-column: 1 / 3;
+  border: solid var(--LIME-ZAP);
+  border-radius: 1em;
+}
+
+.article-card > .article-info-upper {
+  grid-row: 1 / 2;
+  grid-column: 3 / 4;
+  border: solid var(--BLUE-ZAP);
+  border-radius: 1em;
+
+}
+
+.article-card > .article-info-lower {
+  grid-row: 2 / 3;
+  grid-column: 3 / 4;
+  border: solid var(--BLUE-ZAP);
+  border-radius: 1em;
+
 }
