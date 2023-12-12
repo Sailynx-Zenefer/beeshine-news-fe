@@ -11,7 +11,7 @@ import SingleArticleView from "./single-article-view/SingleArticleView";
 import { getFromApi } from "./utils/utils";
 
 function App() {
-  const [articles, setArticles] = useState([]);
+  const [articles, setArticles] = useState([])
 
   useEffect(() => {
     getFromApi("/api/articles")
@@ -34,4 +34,4 @@ function App() {
   );
 }
 
-export default App;
+export default App

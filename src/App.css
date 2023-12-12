@@ -146,7 +146,7 @@
   height: 100dvh;
   margin: 0 auto;
   text-align: center;
-  border: solid #00a32c;
+
 }
 /* 5.573% 94.427%  */
 /* 9.017% 90.983% */
@@ -168,6 +168,7 @@
   margin: 0;
   align-items: center;
   justify-content: center;
+
 
 }
 
