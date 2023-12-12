@@ -189,6 +189,12 @@ nav {
   border-radius: 1em;
 }
 
+nav > h2 {
+  padding: 0;
+  margin: 0;
+  font-size: larger;
+}
+
 .list-articles-view {
   width: 100%;
   grid-row: 2 / 2;

@@ -1,9 +1,14 @@
+import { Link } from "react-router-dom";
 
 const Header = () => {
-    return <header>
+  return (
+    <Link to={"/"}>
+      <header>
         <h1>Beeshine News</h1>
         <p>🐝 ☀️ 📰</p>
-    </header>
-}
+      </header>
+    </Link>
+  );
+};
 
-export default Header
+export default Header;
