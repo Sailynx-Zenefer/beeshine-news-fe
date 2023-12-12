@@ -139,21 +139,25 @@
   --BLACK-A: rgba(0, 0, 0,0);
   }
 
-
 #root {
   display: grid;
   grid-template-rows: 14.590% 85.41%;
+  width: auto;
+  height: 100dvh;
   margin: 0 auto;
   text-align: center;
-
+  border: solid #00a32c;
 }
-
-.head-nav{
+/* 5.573% 94.427%  */
+/* 9.017% 90.983% */
+/* 14.590% 85.41%; */
+#root .head-nav{
   display: grid;
   grid-template-columns: 38.197% 61.803%;
+  grid-template-rows: 100;
 }
 
-header {
+#root .head-nav header {
   display: flex;
   flex-flow: column;
   grid-row: 1 / 2;
@@ -162,9 +166,9 @@ header {
   border-radius: 1em;
   padding: 0;
   margin: 0;
-  display: flex;
   align-items: center;
   justify-content: center;
+
 }
 
 header > h1 {
