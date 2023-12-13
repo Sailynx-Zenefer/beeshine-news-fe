@@ -19,6 +19,7 @@ const SingleArticleView = () => {
     return (
     <section className="single-article-view">
         <FullArticleCard article={article}/>
+        <p style={{border : "solid red"}}>this is a placeholder for comments</p>{/*placeholder */}
     </section>
     )
 }

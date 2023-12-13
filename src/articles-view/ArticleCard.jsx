@@ -1,4 +1,3 @@
-import {Link} from 'react-router-dom';
 //options for posted date/time display
 let options = {
   weekday: "long",
@@ -11,12 +10,11 @@ let options = {
 };
 
 const ArticleCard = ({
-  article: { title, topic, author, article_img_url, created_at, votes, comment_count,article_id },
+  article: { title, topic, author, article_img_url, created_at, votes, comment_count },
 }) => {
   const postedDateString = new Intl.DateTimeFormat("en-GB", options).format(
     new Date(created_at)
   );
-  console.log(article_id)
 
   return (
     <li className="article-card">
@@ -26,7 +24,7 @@ const ArticleCard = ({
       <img src={article_img_url}/>
       <div className="article-info-upper">
         <h4>{topic}</h4>
-        <Link to={`/articles/${article_id}`} ><h3>{title}</h3></Link>
+        <h3>{title}</h3>
       </div>
       <div className="article-info-lower">
         <p>
