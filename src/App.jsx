@@ -1,14 +1,17 @@
 import "./App.css";
+
+import { Routes, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 import Header from "./head-nav/Header";
 import Nav from "./head-nav/nav";
 import ListArticlesView from "./articles-view/ListArticlesView";
+import SingleArticleView from "./single-article-view/SingleArticleView";
 
 import { getFromApi } from "./utils/utils";
 
 function App() {
-  const [articles, setArticles] = useState([]);
+  const [articles, setArticles] = useState([])
 
   useEffect(() => {
     getFromApi("/api/articles")
@@ -23,9 +26,12 @@ function App() {
         <Header />
         <Nav />
       </div>
-      <ListArticlesView articles={articles} />
+      <Routes>
+        <Route path="/" element={<ListArticlesView articles={articles} />} />
+        <Route path="/articles/:article_id" element={<SingleArticleView />} />
+      </Routes>
     </>
   );
 }
 
-export default App;
+export default App

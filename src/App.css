@@ -141,12 +141,12 @@
 
 #root {
   display: grid;
-  grid-template-rows: 14.590% 85.41%;
+  grid-template-rows: 9.017% 90.983%;
   width: auto;
   height: 100dvh;
   margin: 0 auto;
   text-align: center;
-  border: solid #00a32c;
+
 }
 /* 5.573% 94.427%  */
 /* 9.017% 90.983% */
@@ -169,6 +169,7 @@
   align-items: center;
   justify-content: center;
 
+
 }
 
 header > h1 {
@@ -186,6 +187,12 @@ nav {
   grid-column: 2 / 2;
   border: solid var(--YELLW-LITE);
   border-radius: 1em;
+}
+
+nav > h2 {
+  padding: 0;
+  margin: 0;
+  font-size: larger;
 }
 
 .list-articles-view {
