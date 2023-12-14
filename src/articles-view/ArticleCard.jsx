@@ -43,15 +43,12 @@ const ArticleCard = ({
       <h4 className="article-card-topic">{topic}</h4>
       <Link className="article-card-title" to={`/articles/${article_id}`}>
         <h3>{title}</h3>
-      </div>
-      <div className="article-info-lower">
-        <p>
-          {author} posted on {postedDateString}
-        </p>
-      </div>
-      <div className="comments-link">
-        <p>{comment_count} comments</p>
-      </div>
+      </Link>
+      <img className="avatar-img" src={avatar_url} />
+      <p className="article-card-author-posted">
+        {author} posted on {postedDateString}
+      </p>
+      <p className="comments-link">{comment_count} comments</p>
     </li>
   );
 };
