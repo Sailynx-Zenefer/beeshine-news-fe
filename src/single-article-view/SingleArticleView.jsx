@@ -31,7 +31,7 @@ const SingleArticleView = ({users}) => {
     return (
     <section className="single-article-view">
         <FullArticleCard article={article}/>
-        <CommentsLister comments={comments} users={users}/>
+        <p style={{border : "solid red"}}>this is a placeholder for comments</p>{/*placeholder */}
     </section>
     )
 }
