@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import Voter from "../small-comp/Voter";
 //options for posted date/time display
 let options = {
   weekday: "long",
@@ -21,24 +20,19 @@ const ArticleCard = ({
     votes,
     comment_count,
     article_id,
-  },avatar_url,setArticles
+  },avatar_url
 }) => {
   const postedDateString = new Intl.DateTimeFormat("en-GB", options).format(
     new Date(created_at)
   );
-  const setOptimArticlesVote = (voteChange) => {
-    setArticles((currArticles) => {
-      const modArticles = [...currArticles];
-      const index = modArticles.findIndex((article)=> article.article_id === article_id)
-      modArticles[index].votes + voteChange
-      return modArticles})
-  }
 
   return (
     <li className="article-card">
       <div className="article-card-top-panel"></div>
       <div className="article-card-bottom-panel"></div>
-      <Voter votes={votes} voteeId={article_id} setOptimVote={setOptimArticlesVote} voteeType={'article'}/>
+      <div className="voter">
+        <h3>{votes} votes</h3>
+      </div>
       <img className= "article-img" src={article_img_url} />
       <h4 className="article-card-topic">{topic}</h4>
       <Link className="article-card-title" to={`/articles/${article_id}`}>

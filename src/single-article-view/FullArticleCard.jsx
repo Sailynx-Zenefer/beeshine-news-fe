@@ -1,5 +1,3 @@
-import Voter from "../small-comp/Voter";
-
 //options for posted date/time display
 const options = {
   weekday: "long",
@@ -21,19 +19,11 @@ const FullArticleCard = ({
     created_at,
     votes,
     comment_count,
-    author_avatar_url,
-    article_id
-  },setArticle
+    author_avatar_url
+  }
 }) => {
   const dateConverted = new Date(created_at)
   const postedDateString = dateConverted.toLocaleString("en-GB", options);
-
-  const setOptimFullArticleVote = (voteChange) => {
-    setArticle((currArticle) => {
-      const modArticle = {...currArticle};
-      modArticle.votes + voteChange;
-      return modArticle})
-  }
 
   return (
     <section className="full-article-card">
@@ -48,9 +38,12 @@ const FullArticleCard = ({
       <p>
         {author} posted on {postedDateString}
       </p>
+
       </div>
       <div className="f-article-bottom-panel">
-        <Voter votes={votes} voteeId={article_id} setOptimVote={setOptimFullArticleVote} voteeType={'article'} />
+      <div className="voter">
+        <h3>{votes} votes</h3>
+      </div>
       <div className="comments-link">
         <p>{comment_count} comments</p>
       </div>

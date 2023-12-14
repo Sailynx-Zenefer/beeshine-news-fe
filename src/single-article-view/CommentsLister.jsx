@@ -1,11 +1,11 @@
 import CommentCard from "./CommentCard";
 
-const CommentsLister = ({comments,users,setComments,articleId}) => {
+const CommentsLister = ({comments,users}) => {
     if (comments.length > 0){
         return (
             <ul className="comments-list">
               {comments.map((comment) => {
-                return <CommentCard key={comment.comment_id} comment={comment} users={users} setComments={setComments} articleId={articleId}/>;
+                return <CommentCard key={comment.comment_id} comment={comment} users={users}/>;
               })}
             </ul>
           );

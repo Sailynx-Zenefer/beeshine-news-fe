@@ -1,13 +1,13 @@
 import ArticleCard from "./ArticleCard";
 import { useEffect, useState } from "react";
-import { reqFromApi,avatarFromAuthor} from "../utils/utils";
+import { getFromApi,avatarFromAuthor} from "../utils/utils";
 
 
 const ListArticlesView = ({ users }) => {
   const [articles, setArticles] = useState([]);
 
   useEffect(() => {
-    reqFromApi("get","/api/articles")
+    getFromApi("/api/articles")
       .then(({ data: { articles } }) => setArticles(articles))
       .catch((err) => console.log(err))
       .finally(() => {});
@@ -23,7 +23,6 @@ const ListArticlesView = ({ users }) => {
               key={article.article_id}
               article={article}
               avatar_url={avatar_url}
-              setArticles={setArticles}
             />
           );
         })}

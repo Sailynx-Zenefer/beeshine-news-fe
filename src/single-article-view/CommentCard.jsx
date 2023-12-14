@@ -1,5 +1,4 @@
 //options for posted date/time display
-import Voter from "../small-comp/Voter";
 import { avatarFromAuthor } from "../utils/utils";
 let options = {
   weekday: "long",
@@ -13,19 +12,11 @@ let options = {
 
 const CommentCard = ({
   comment: { comment_id, body, author, votes, created_at },
-  users, setComments, articleId
+  users,
 }) => {
   const author_avatar_url = avatarFromAuthor(author, users);
   const dateConverted = new Date(created_at);
   const postedDateString = dateConverted.toLocaleString("en-GB", options);
-
-  const setOptimCommentVote = (voteChange) => {
-    setComments((currComments) => {
-      const modComments = {...currComments};
-      const index = currComments.findIndex((comment)=> comment.comment_id === comment_id)
-      modComments[index].votes + voteChange
-      return modComments})
-  }
 
   return (
     <li key={comment_id} className="comment-card">
@@ -37,7 +28,9 @@ const CommentCard = ({
         <p className="comment-body">{body}</p>
         <div className="comment-bottom-panel">
           <p className="posted-on">posted on {postedDateString}</p>
-          <Voter votes={votes} voteeId={comment_id} setOptimVote={setOptimCommentVote} voteeType={'comment'} parentId={articleId}/>
+          <div className="voter">
+          <h3>{votes} votes</h3>
+        </div>
         </div>
       </div>
     </li>
