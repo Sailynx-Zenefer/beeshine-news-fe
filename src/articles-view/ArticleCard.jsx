@@ -30,7 +30,7 @@ const ArticleCard = ({
     setArticles((currArticles) => {
       const modArticles = [...currArticles];
       const index = modArticles.findIndex((article)=> article.article_id === article_id)
-      modArticles[index].votes + voteChange
+      modArticles[index].votes += voteChange
       return modArticles})
   }
 
