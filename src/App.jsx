@@ -1,5 +1,5 @@
 import "./App.css";
-import { getFromApi } from "./utils/utils";
+import { reqFromApi } from "./utils/utils";
 import { Routes, Route } from "react-router-dom";
 
 import Header from "./head-nav/Header";
@@ -12,7 +12,7 @@ function App() {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    getFromApi("/api/users")
+    reqFromApi("get","/api/users")
     .then(({ data: { users } }) => setUsers(users))
     .catch((err) => console.log(err))
     .finally(() => {});

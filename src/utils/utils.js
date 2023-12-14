@@ -1,8 +1,12 @@
 import axios from "axios";
 import {apiAddress} from './apiAddress.json';
 
-export const getFromApi = (endpoint) => {
-    return axios.get(`${apiAddress}${endpoint}`)
+export const reqFromApi = (req,endpoint,data) => {
+    return axios({
+        method: req,
+        url: `${apiAddress}${endpoint}`,
+        data: data
+      });
 }
 
 
