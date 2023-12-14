@@ -607,18 +607,59 @@ header > p {
   grid-template-columns: 14.59% 9.017% 14.59% 23.606% 14.59% 9.017% 14.59%;
 }
 
-.comment-bulk > .comment-bottom-panel > .voter{
-  box-sizing: border-box;
-  font-size: 0.6em;
-  grid-column: 1 / 2;
-  grid-row: 1 / 1;
-  margin: auto;
-  padding: 0;
-}
+
 
 .comment-bulk > .comment-bottom-panel > .posted-on{
   box-sizing: border-box;
-  font-size: 0.8em;
+  font-size: 0.8rem;
   grid-column: 2 / 8;
   grid-row: 1 / 1;
+}
+
+.voter {
+  display: flex;
+  height: 100%;
+}
+
+.voter > p {
+  font-size: 0.8rem;
+  margin:auto;
+  margin-left:3px;
+  margin-right:3px;
+}
+
+.voter > .up-vote {
+  background-color: var(--GREEN-DARK);
+  border-radius: 1em;
+  padding: 1px;
+  margin: auto;
+  margin-right:3px;
+  height: auto;
+}
+
+.voter > .up-voted {
+  background-color: var(--GREEN-LITE);
+  border-radius: 1em;
+  padding: 1px;
+  margin: auto;
+  margin-right:3px;
+  height: auto;
+}
+
+.voter > .down-vote {
+  background-color: var(--RED-DARK);
+  border-radius: 1em;
+  padding: 0;
+  margin: auto;
+  margin-left: 3px;
+  height: auto;
+}
+
+.voter > .down-voted{
+  background-color: var(--RED-LITE);
+  border-radius: 1em;
+  padding: 0;
+  margin: auto;
+  margin-left: 3px;
+  height: auto;
 }
