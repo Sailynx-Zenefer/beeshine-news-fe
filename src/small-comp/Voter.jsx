@@ -5,7 +5,7 @@ import { reqFromApi } from "../utils/utils";
 const voteRef = {
   up: {
     up: {
-      voteStrChange: 'default',
+      voteStrChange: "default",
       voteIntChange: -1,
     },
     dn: {
@@ -20,7 +20,7 @@ const voteRef = {
   },
   dn: {
     dn: {
-      voteStrChange: 'default',
+      voteStrChange: "default",
       voteIntChange: 1,
     },
     up: {
@@ -53,47 +53,34 @@ const Voter = ({
   const voteeTypeEndpoint = voteeEndpointRef[voteeType];
 
   const toggleVote = (upOrDn) => {
-
     const voteObj = {
       inc_votes: voteRef[upOrDn][voteeVal].voteIntChange,
     };
+    setOptimVote(voteRef[upOrDn][voteeVal].voteIntChange);
     setUserData((currUserData) => {
       const modUserData = { ...currUserData };
       modUserData.votedOn[voteeId] = voteRef[upOrDn][voteeVal].voteStrChange;
       return modUserData;
-    });
-
+    })
     return reqFromApi("patch", voteeTypeEndpoint, voteObj).then((res) => {
-      setOptimVote(voteRef[upOrDn][voteeVal].voteIntChange);
-
-      setVoteeVal(() => {
-        const modVoteeVal = userData.votedOn[voteeId];
-        return modVoteeVal;
-      });
+      setVoteeVal(() => userData.votedOn[voteeId]);
     });
   };
-
-  const handleUpVoteClick = () => toggleVote("up");
-  const handleDownVoteClick = () => toggleVote("dn");
-
-  useEffect(() => {
-    console.log(voteeVal);
-  }, [voteeVal,'artghj']);
 
   return (
     <div className="voter">
       <button
         className={voteeVal === "up" ? "up-voted" : "up-vote"}
-        onClick={handleUpVoteClick}
-        disabled={voteeType === 'comment' ? true : false}
+        onClick={() => toggleVote("up")}
+        disabled={voteeType === "comment" ? true : false}
       >
         ◭
       </button>
       <p>{votes}</p>
       <button
         className={voteeVal === "dn" ? "down-voted" : "down-vote"}
-        onClick={handleDownVoteClick}
-        disabled={voteeType === 'comment' ? true : false}
+        onClick={() => toggleVote("dn")}
+        disabled={voteeType === "comment" ? true : false}
       >
         ⧩
       </button>

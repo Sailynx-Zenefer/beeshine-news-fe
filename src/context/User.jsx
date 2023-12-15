@@ -1,13 +1,15 @@
 import {createContext, useState} from 'react'
-export const UserContext = createContext()
+export const UserContext = createContext();
+
 
 const testUserData = {
-    user : {
-        username : 'TestUser420',
-        name : 'Ima Testperson',
-        avatar_url : '..assets/user-star.png'
+    currUser : {
+        username : 'happyamy2016',
+        name : 'Amy Happy',
+        avatar_url : 'https://vignette1.wikia.nocookie.net/mrmen/images/7/7f/Mr_Happy.jpg/revision/latest?cb=20140102171729'
     },
-    votedOn : {}
+    votedOn : {},
+    comments : []
 }
 
 export const UserProvider = ({children}) => {
